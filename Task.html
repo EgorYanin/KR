@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Решение алгоритмической задачи</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="history.html">История</a></li>
+        <li><a href="news.html">Новости</a></li>
+        <li><a href="team.html">Состав</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+        <li><a href="https://www.khl.ru/" target="_blank">КХЛ</a></li>
+        <li><a href="feedback.html">Отзывы о матче</a></li>
+        <li><a href="passport.html">Паспорт</a></li>
+        <li><a href="Screan.html">DOM JS Информация</a></li>
+        <li><a href="Eng_Pas.html">Изменение языка</a></li>
+        <li><a href="Task.html" class="active">Задачка</a></li>
+      </ul>
+    </nav>
+  </header>
+ <h1>Проверка возможности выпилить квадратный брус из бревна</h1>
+
+    <label for="diameter">Введите диаметр бревна (D):</label>
+    <input type="number" id="diameter" step="0.1" required><br>
+
+    <label for="width">Введите ширину бруса (A):</label>
+    <input type="number" id="width" step="0.1" required><br>
+
+    <button onclick="checkIfCanCut()">Проверить</button>
+
+    <p id="result"></p>
+
+</body>
+<script src="zadacha.js"></script>
+</html>
