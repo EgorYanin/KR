@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отзывы о матче</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+  <header class="bg-primary text-light py-3">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="sponsors.html">
+          <img src="logo.png" alt="Логотип Лада" title="Информация о спонсорах" width="50" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
+            <li class="nav-item"><a href="history.html" class="nav-link">История</a></li>
+            <li class="nav-item"><a href="news.html" class="nav-link">Новости</a></li>
+            <li class="nav-item"><a href="team.html" class="nav-link">Состав</a></li>
+            <li class="nav-item"><a href="https://www.khl.ru/" target="_blank" class="nav-link">КХЛ</a></li>
+            <li class="nav-item"><a href="feedback.html" class="nav-link active">Отзывы о матче</a></li>
+            <li class="nav-item"><a href="shop.html" class="nav-link">Магазин</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container my-4">
+    <h1 class="mb-4">Оставьте свои впечатления о последнем матче</h1>
+    <section class="bg-light p-4 rounded shadow-sm">
+      <p>Заполните форму ниже, чтобы поделиться своими впечатлениями о последнем матче.</p>
+
+      <form action="https://hclada.ru/lada/games_calendar/" class="mb-4">
+        <div class="mb-3">
+          <label for="username" class="form-label">Ваше имя:</label>
+          <input type="text" id="username" name="username" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="rating" class="form-label">Оцените матч (1-10):</label>
+          <input type="number" id="rating" name="rating" class="form-control" min="1" max="10" required>
+        </div>
+        <div class="mb-3">
+          <label for="match_date" class="form-label">Дата матча:</label>
+          <input type="date" id="match_date" name="match_date" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <p>Понравился ли матч?</p>
+          <div class="form-check">
+            <input type="radio" id="likedYes" name="liked" value="yes" class="form-check-input" required>
+            <label for="likedYes" class="form-check-label">Да</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="likedNo" name="liked" value="no" class="form-check-input">
+            <label for="likedNo" class="form-check-label">Нет</label>
+          </div>
+        </div>
+        <div class="mb-3">
+          <p>Что вам больше всего запомнилось?</p>
+          <div class="form-check">
+            <input type="checkbox" id="highlightGoals" name="highlights" value="goals" class="form-check-input">
+            <label for="highlightGoals" class="form-check-label">Голы</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="highlightDefense" name="highlights" value="defense" class="form-check-input">
+            <label for="highlightDefense" class="form-check-label">Защита</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="highlightAtmosphere" name="highlights" value="atmosphere" class="form-check-input">
+            <label for="highlightAtmosphere" class="form-check-label">Атмосфера</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="highlightTeamwork" name="highlights" value="teamwork" class="form-check-input">
+            <label for="highlightTeamwork" class="form-check-label">Командная игра</label>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="comments" class="form-label">Ваши комментарии:</label>
+          <textarea id="comments" name="comments" rows="4" class="form-control" placeholder="Ваши впечатления о матче..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Отправить отзыв</button>
+      </form>
+    </section>
+  </main>
+
+<div class="container my-4 page-navigation">
+    <h3>Навигация по странице</h3>
+    <ul class="list-unstyled">
+      <li><a href="#top">К началу страницы</a></li>
+    </ul>
+</div>
+
+
+  <footer class="bg-primary text-light text-center py-3">
+    <p>© 2024 Хоккейный клуб "Лада"</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

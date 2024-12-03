@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Хоккейный клуб "Лада" - Главная</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<style>
+    td:first-child {
+      text-align: left;
+      color: blue;
+      font-weight: bold;
+    }
+    th {
+      padding: 10px 20px;
+      color: blue;
+      border-bottom: 1px solid #F4EEE8;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    td:nth-child(even) {
+      background: #00619E;
+    }
+    td:nth-child(odd) {
+      background: #D1C7BF;
+    }
+    .round-top {
+      border-top-left-radius: 10px;
+    }
+    .round-bottom {
+      border-bottom-left-radius: 5px;
+    }
+    td:hover {
+      background: white;
+      font-weight: bold;
+    }
+</style>
+</head>
+<body>
+  <header class="bg-primary text-light text-center py-3">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="sponsors.html">
+          <img src="logo.png" alt="Логотип Лада" title="Информация о спонсорах" width="50" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="index.html" class="nav-link active">Главная</a></li>
+            <li class="nav-item"><a href="history.html" class="nav-link">История</a></li>
+            <li class="nav-item"><a href="news.html" class="nav-link">Новости</a></li>
+            <li class="nav-item"><a href="team.html" class="nav-link">Состав</a></li>
+            <li class="nav-item"><a href="https://www.khl.ru/" target="_blank" class="nav-link">КХЛ</a></li>
+            <li class="nav-item"><a href="feedback.html" class="nav-link">Отзывы о матче</a></li>
+            <li class="nav-item"><a href="shop.html" class="nav-link">Магазин</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container my-4">
+    <h1 class="mb-4">Наша команда - наша победа!</h1>
+    <p>Хоккейный клуб "Лада" — профессиональный хоккейный клуб из Тольятти. Клуб основан в 1976 году и с тех пор добился значительных успехов в российском и международном хоккее.</p>
+    <div class="text-center">
+      <img src="lada_team.jpg" alt="Команда Лада" title="Команда Лада" class="img-fluid">
+    </div>
+<div class="table-responsive mt-5" id="results-table">
+    <table border="1" cellspacing="0" cellpadding="10">
+      <thead>
+        <tr>
+          <th class="round-top">Дата</th>
+          <th>Противник</th>
+          <th>Счёт</th>
+          <th class="round-top">Результат</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2024-11-28</td>
+          <td>Ак Барс</td>
+          <td>3:2</td>
+          <td>Победа</td>
+        </tr>
+        <tr>
+          <td>2024-11-25</td>
+          <td>Салават Юлаев</td>
+          <td>1:4</td>
+          <td>Поражение</td>
+        </tr>
+        <tr>
+          <td>2024-11-22</td>
+          <td>Динамо Москва</td>
+          <td>2:3</td>
+          <td>Победа</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+    <section class="mt-5">
+      <h2>Предстоящие игры</h2>
+      <ul>
+        <li>2024-12-01: Лада vs Спартак</li>
+        <li>2024-12-05: Лада vs ЦСКА</li>
+        <li>2024-12-10: Лада vs СКА</li>
+      </ul>
+    </section>
+
+
+    <section class="mt-5" id="gallery">
+      <h2>Галерея</h2>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <img src="Akbars.jpg" alt="Матч с Ак Барс" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4">
+          <img src="Dinamo.jpg" alt="Матч с Динамо" class="img-fluid rounded">
+        </div>
+      </div>
+    </section>
+  </main>
+
+<div class="container my-4">
+    <h3>Навигация по странице</h3>
+    <ul class="list-unstyled">
+      <li><a href="#top">К началу страницы</a></li>
+      <li><a href="#results-table">К таблице</a></li>
+      <li><a href="#gallery">К галерее</a></li>
+    </ul>
+</div>
+
+
+  <footer class="bg-primary text-light text-center py-3">
+    <p>© 2024 Хоккейный клуб "Лада"</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
