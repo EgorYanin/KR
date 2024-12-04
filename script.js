@@ -16,39 +16,47 @@ const products = [
 const productList = document.getElementById("product-list");
 
 
-products.forEach(product => {
-  const productBlock = document.createElement("div");
-  productBlock.className = "col-md-3 col-sm-6 product";
-  productBlock.innerHTML = `
-    <div class="card">
-      <img src="${product.image}" class="card-img-top" alt="${product.name}">
-      <div class="card-body">
-        <h5 class="card-title">${product.name}</h5>
-        <p class="card-text">${product.description}</p>
-        <p class="text-primary">Цена: ${product.price} р.</p>
-      </div>
-      <div class="card-footer">
-        <input type="number" id="quantity-${product.id}" name="quantity" min="0" value="0" class="form-control">
-        <p class="order-text">Заказать</p>
-      </div>
-    </div>
-  `;
-  productList.appendChild(productBlock);
-});
-
-
-const addToCartButton = document.getElementById("add-to-cart");
-
-addToCartButton.addEventListener("click", () => {
-  const messageContainer = document.createElement("div");
-  messageContainer.className = "text-center mt-3 text-success";
-  messageContainer.textContent = "Спасибо за заказ!";
-
-  if (!document.body.contains(document.querySelector(".text-success"))) {
-    productList.appendChild(messageContainer);
+function displayProducts(filteredProducts) {
+  productList.innerHTML = "";
+  if (filteredProducts.length === 0) {
+    productList.innerHTML = '<p class="text-center text-danger">Товары не найдены.</p>';
+    return;
   }
-});
+  filteredProducts.forEach(product => {
+    const productBlock = document.createElement("div");
+    productBlock.className = "col-md-3 col-sm-6 product";
+    productBlock.innerHTML = `
+      <div class="card">
+        <img src="${product.image}" class="card-img-top" alt="${product.name}">
+        <div class="card-body">
+          <h5 class="card-title">${product.name}</h5>
+          <p class="card-text">${product.description}</p>
+          <p class="text-primary">Цена: ${product.price} р.</p>
+        </div>
+        <div class="card-footer">
+          <input type="number" id="quantity-${product.id}" name="quantity" min="0" value="0" class="form-control">
+          <p class="order-text">Заказать</p>
+        </div>
+      </div>
+    `;
+    productList.appendChild(productBlock);
+  });
+}
 
+displayProducts(products);
+
+const searchInput = document.getElementById("search-input");
+const searchButton = document.getElementById("search-button");
+
+
+function searchProducts() {
+  const searchText = searchInput.value.toLowerCase().trim();
+  const filteredProducts = products.filter(product =>
+    product.name.toLowerCase().includes(searchText) ||
+    product.description.toLowerCase().includes(searchText)
+  );
+  displayProducts(filteredProducts);
+}
 
 
 
