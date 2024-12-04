@@ -59,6 +59,24 @@ function searchProducts() {
 }
 
 
+searchButton.addEventListener("click", searchProducts);
+searchInput.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    searchProducts();
+  }
+});
+
+const addToCartButton = document.getElementById("add-to-cart");
+
+addToCartButton.addEventListener("click", () => {
+  const messageContainer = document.createElement("div");
+  messageContainer.className = "text-center mt-3 text-success";
+  messageContainer.textContent = "Спасибо за заказ!";
+  productList.appendChild(messageContainer);
+
+
+});
+
 
 
 
