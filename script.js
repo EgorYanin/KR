@@ -47,18 +47,18 @@ const products = [
 
 
     const searchInput = document.getElementById("search-input");
-    const searchButton = document.getElementById("search-button");
+
 
     function searchProducts() {
       const searchText = searchInput.value.toLowerCase().trim();
       const filteredProducts = products.filter(product =>
-        product.name.toLowerCase().includes(searchText) ||
+        product.name.toLowerCase().startsWith(searchText) ||
         product.description.toLowerCase().includes(searchText)
       );
       displayProducts(filteredProducts);
     }
 
-    searchButton.addEventListener("click", searchProducts);
+
     searchInput.addEventListener("keypress", (event) => {
       if (event.key === "Enter") {
         searchProducts();
